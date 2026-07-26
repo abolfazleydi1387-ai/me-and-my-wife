@@ -405,3 +405,24 @@ showScene5();
 },1200);
 
 }
+//=========================
+// Scene 5
+//=========================
+
+const scene5=document.getElementById("scene5");
+
+const book=document.getElementById("book");
+
+function showScene5(){
+
+scene4.classList.remove("show");
+
+scene5.classList.add("show");
+
+}
+
+book.addEventListener("click",()=>{
+
+book.querySelector(".cover").style.transform="rotateY(-170deg)";
+
+});
