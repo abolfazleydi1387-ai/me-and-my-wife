@@ -667,3 +667,58 @@ text-align:justify;
 direction:rtl;
 
 }
+/*========================*/
+/* Scene4 Open Animation */
+/*========================*/
+
+.envelope.open .envelope-top{
+    transform:rotateX(180deg);
+}
+
+.envelope.open .letter{
+    transform:translate(-50%,-220px);
+}
+
+.letter{
+    transition:1.5s;
+}
+
+#letterText{
+    margin-top:15px;
+    font-size:20px;
+    line-height:2.3;
+}
+
+.next-scene-btn{
+
+display:none;
+
+margin:40px auto 20px;
+
+padding:14px 40px;
+
+border:none;
+
+border-radius:40px;
+
+background:linear-gradient(90deg,#ff4d9e,#ff8ec7);
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+box-shadow:0 0 20px #ff77bb;
+
+transition:.4s;
+
+}
+
+.next-scene-btn:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 35px #ff77bb;
+
+}
