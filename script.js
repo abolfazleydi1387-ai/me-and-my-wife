@@ -133,3 +133,21 @@ function createFloatingHearts(){
 document.getElementById('toScene4')?.addEventListener('click', () => {
   alert('Scene 4 will be added next 💌');
 });
+//=========================
+// Scene 4
+//=========================
+
+const scene4 =
+document.getElementById("scene4");
+
+const envelope =
+document.getElementById("envelope");
+
+const letter =
+document.getElementById("letter");
+
+function showScene4(){
+
+scene4.classList.add("show");
+
+}
