@@ -523,3 +523,68 @@ bar.style.animationPlayState="paused";
 },120);
 
 }
+//========================
+// Scene 8
+//========================
+
+const scene8=document.getElementById("scene8");
+
+const rain=document.getElementById("loveRain");
+
+const icons=[
+
+"❤️",
+
+"🌹",
+
+"✨"
+
+];
+
+function showScene8(){
+
+scene8.classList.add("show");
+
+startLoveRain();
+
+}
+
+function startLoveRain(){
+
+setInterval(()=>{
+
+createLoveItem();
+
+},140);
+
+}
+
+function createLoveItem(){
+
+const item=document.createElement("div");
+
+item.className="loveItem";
+
+item.innerHTML=
+
+icons[Math.floor(Math.random()*icons.length)];
+
+item.style.left=Math.random()*100+"vw";
+
+item.style.fontSize=
+
+20+Math.random()*35+"px";
+
+item.style.animationDuration=
+
+4+Math.random()*5+"s";
+
+rain.appendChild(item);
+
+setTimeout(()=>{
+
+item.remove();
+
+},9000);
+
+}
