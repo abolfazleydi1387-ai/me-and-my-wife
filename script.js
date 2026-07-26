@@ -315,7 +315,7 @@ setTimeout(typeLetter,42);
 
 else{
 
-document.getElementById("nextScene5").style.display="block";
+finishLetter();
 
 }
 
@@ -330,3 +330,78 @@ envelope.classList.add("open");
 setTimeout(typeLetter,1200);
 
 });
+//=========================
+// Scene4 Ending
+//=========================
+
+const flash =
+document.getElementById("whiteFlash");
+
+const nextBtn =
+document.getElementById("nextScene5");
+
+function roses(){
+
+for(let i=0;i<25;i++){
+
+const r=document.createElement("div");
+
+r.className="rose";
+
+r.innerHTML="🌹";
+
+r.style.left=Math.random()*100+"vw";
+
+r.style.animationDuration=
+(5+Math.random()*4)+"s";
+
+r.style.fontSize=
+(18+Math.random()*25)+"px";
+
+document.body.appendChild(r);
+
+setTimeout(()=>{
+
+r.remove();
+
+},9000);
+
+}
+
+}
+
+function finishLetter(){
+
+roses();
+
+nextBtn.classList.add("show");
+
+flash.classList.add("show");
+
+setTimeout(()=>{
+
+flash.classList.remove("show");
+
+},1800);
+
+}
+
+nextBtn.onclick=function(){
+
+document.getElementById("scene4").style.opacity=0;
+
+setTimeout(()=>{
+
+document.getElementById("scene4").style.display="none";
+
+/*
+
+اینجا بعدا:
+
+showScene5();
+
+*/
+
+},1200);
+
+}
