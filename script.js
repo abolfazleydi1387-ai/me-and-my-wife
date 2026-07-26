@@ -426,3 +426,100 @@ book.addEventListener("click",()=>{
 book.querySelector(".cover").style.transform="rotateY(-170deg)";
 
 });
+//==========================
+// Scene 7 Music
+//==========================
+
+const music=document.getElementById("loveMusic");
+
+const musicButton=document.getElementById("musicButton");
+
+const bars=document.querySelectorAll(".equalizer span");
+
+let playing=false;
+
+music.volume=0;
+
+musicButton.onclick=()=>{
+
+if(!playing){
+
+music.play();
+
+playing=true;
+
+musicButton.innerHTML="❚❚";
+
+bars.forEach(bar=>{
+
+bar.style.animationPlayState="running";
+
+});
+
+fadeIn();
+
+}
+
+else{
+
+fadeOut();
+
+}
+
+}
+
+function fadeIn(){
+
+music.volume=0;
+
+const timer=setInterval(()=>{
+
+if(music.volume<0.98){
+
+music.volume+=0.02;
+
+}
+
+else{
+
+clearInterval(timer);
+
+}
+
+},120);
+
+}
+
+function fadeOut(){
+
+const timer=setInterval(()=>{
+
+if(music.volume>0.02){
+
+music.volume-=0.02;
+
+}
+
+else{
+
+clearInterval(timer);
+
+music.pause();
+
+music.currentTime=0;
+
+playing=false;
+
+musicButton.innerHTML="▶";
+
+bars.forEach(bar=>{
+
+bar.style.animationPlayState="paused";
+
+});
+
+}
+
+},120);
+
+}
