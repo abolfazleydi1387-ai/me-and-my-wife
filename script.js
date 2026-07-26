@@ -588,3 +588,68 @@ item.remove();
 },9000);
 
 }
+//==========================
+// Scene 9
+//==========================
+
+const scene9 =
+document.getElementById("scene9");
+
+const title =
+document.getElementById("finalTitle");
+
+const subtitle =
+document.getElementById("finalSubtitle");
+
+function showScene9(){
+
+scene8.classList.remove("show");
+
+scene9.classList.add("show");
+
+typeEnding();
+
+}
+
+const endingText1 =
+"Abolfazl ❤️ Niayesh";
+
+const endingText2 =
+"Forever & Always";
+
+let t1=0;
+let t2=0;
+
+function typeEnding(){
+
+if(t1<endingText1.length){
+
+title.innerHTML+=endingText1.charAt(t1);
+
+t1++;
+
+setTimeout(typeEnding,120);
+
+}
+
+else{
+
+typeSubtitle();
+
+}
+
+}
+
+function typeSubtitle(){
+
+if(t2<endingText2.length){
+
+subtitle.innerHTML+=endingText2.charAt(t2);
+
+t2++;
+
+setTimeout(typeSubtitle,100);
+
+}
+
+}
