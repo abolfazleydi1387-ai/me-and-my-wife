@@ -52,24 +52,18 @@ scene2.style.display="flex";
 
 const heart =
 document.querySelector(".heart");
+heart.addEventListener("click",()=>{
 
+    heart.innerHTML="💖";
+    heart.style.animation="none";
 
-heart.addEventListener(
-"click",
-()=>{
+    setTimeout(()=>{
 
+        scene2.style.display="none";
 
-heart.innerHTML="💖";
+        showScene3();
 
-
-heart.style.animation="none";
-
-
-alert(
-"Niayesh ❤️"
-);
-
-
+    },1000);
 
 });
 /* =========================
